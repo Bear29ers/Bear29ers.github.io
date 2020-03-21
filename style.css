@@ -186,11 +186,24 @@ header {
   transition: transform 650ms ease-out, -webkit-transform 650ms ease-out;
 }
 
+#canvas-container {
+  position: relative;
+  overflow: hidden;
+}
+
 #bubble {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
   z-index: -1;
+  transition: 800ms ease-out;
+  opacity: 0;
+}
+
+#bubble.on {
+  opacity: 1;
 }
 
 .menu-toggler.open {
@@ -1024,6 +1037,10 @@ header {
 
 
 @media screen and (max-width: 1000px) {
+  .top-nav .nav-list li {
+    margin: 0 1rem;
+  }
+
   .landing-text img {
     width: 50%;
   }
@@ -1162,6 +1179,19 @@ header {
   .portfolio-card .content a {
     font-size: 1.1rem;
   }
+  .top-nav .nav-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+
+  .top-nav .nav-list li {
+    margin: 2rem 0;
+  }
+
+  .nav-link {
+    font-size: 4.5rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1180,20 +1210,6 @@ header {
 
   .landing-text h6 {
     font-size: 1.7rem;
-  }
-
-  .nav-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
-  }
-
-  .nav-list li {
-    margin: 2rem 0;
-  }
-
-  .nav-link {
-    font-size: 4.5rem;
   }
 
   .about-heading h1 {
@@ -1272,10 +1288,6 @@ header {
 }
 
 @media screen and (max-width: 600px) {
-  #bubble {
-    opacity: 0;
-  }
-
   .menu-toggler {
     top: 2rem;
     right: 2rem;

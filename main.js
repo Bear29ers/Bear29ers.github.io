@@ -2,6 +2,7 @@ $(document).ready(function () {
   $('.menu-toggler').on('click', function () {
     $(this).toggleClass('open');
     $('.top-nav').toggleClass('open');
+    $('#bubble').toggleClass('on');
   });
 
   $('.top-nav .nav-link').on('click', function () {

@@ -1288,6 +1288,10 @@ header {
 }
 
 @media screen and (max-width: 600px) {
+  #bubble {
+    visibility: hidden;
+  }
+
   .menu-toggler {
     top: 2rem;
     right: 2rem;

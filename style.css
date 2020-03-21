@@ -1355,6 +1355,21 @@ header {
     width: 95%;
   }
 
+  .timeline ul li {
+    width: 100%;
+    padding: 2rem 2rem;
+  }
+
+  .timeline ul li:nth-child(odd),
+  .timeline ul li:nth-child(even) {
+    padding-left: 8rem;
+  }
+
+  .timeline ul li:nth-child(odd) .time,
+  .timeline ul li:nth-child(even) .time {
+    left: 8rem;
+  }
+
   form {
     width: 100%;
   }

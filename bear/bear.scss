@@ -1,0 +1,279 @@
+#indicator {
+  margin: 0;
+  padding: 0;
+  z-index: 25;
+  cursor: pointer;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  -webkit-transition: opacity 1s ease;
+          transition: opacity 1s ease;
+}
+
+.arrow {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  opacity: 0;
+  transition: 650ms;
+}
+
+#indicator:hover .arrow {
+  opacity: 1;
+}
+
+.arrow span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: -10px;
+  border-bottom: 1px solid #FF5ACD;
+  border-right: 1px solid #FF5ACD;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  -webkit-animation: arrow 2s infinite;
+          animation: arrow 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.arrow span:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.bear{
+  width: 60px;
+  -webkit-animation: updown 2s infinite alternate;
+          animation: updown 2s infinite alternate;
+  &__ears{
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-animation: updown 2s infinite alternate;
+            animation: updown 2s infinite alternate;
+    -webkit-transform:translateY(2.5px);
+            transform:translateY(2.5px);
+    .ear{
+      width: 22px;
+      height: 20px;
+      background: #634538;
+    }
+    &__left{
+      border-radius: 50%;
+      -webkit-transform: skewY(-5deg);
+              transform: skewY(-5deg);
+    }
+    &__right{
+      border-radius: 50%;
+      -webkit-transform: skewY(5deg);
+              transform: skewY(5deg);
+    }
+  }
+  &__body{
+    width: 100%;
+    height: 57.5px;
+    background: #634538;
+    border-radius: 50% / 40% 40% 60% 60%;
+  }
+  &__eyes{
+    display: -webkit-box;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    .eye{
+      width: 5px;
+      height: 5px;
+      background: #2D120F;
+      position: absolute;
+      border-radius: 50%;
+      -webkit-animation: blink 1s infinite alternate;
+              animation: blink 1s infinite alternate;
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease;
+    }
+    &--left{
+      left: 12.5px;
+    }
+    &--right{
+      right: 12.5px;
+    }
+  }
+  &__nose{
+    width: 20px;
+    background: #D1A68F;
+    height: 25px;
+    margin: auto;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    border-radius: 50% / 60% 60% 30% 30%;
+    position: relative;
+    -webkit-animation: moveNose 3s infinite;
+            animation: moveNose 3s infinite;
+    -webkit-transition: .4s ease;
+    transition: .4s ease;
+    &--inner{
+      width: 12.5px;
+      height: 6.5px;
+      background: #2D120F;
+      position: absolute;
+      top: 50%;
+      left:50%;
+      -webkit-transform: translate(-50%,-50%);
+              transform: translate(-50%,-50%);
+      border-radius:50% / 40% 40% 60% 60%;
+      &:after{
+        content:"";
+        width: 5px;
+        height: 5px;
+        background: #2D120F;
+        position: absolute;
+        bottom: -3px;
+        left: 50%;
+        border-radius:50%;
+        -webkit-transform: translate(-50%);
+                transform: translate(-50%);
+        box-shadow:
+          5px 1.2px 0 #D1A68F,
+          -5px 1.2px 0 #D1A68F;
+      }
+    }
+  }
+}
+
+.shadow{
+  position: absolute;
+  width: 50px;
+  height: 7.5px;
+  margin: auto;
+  margin-top: -5px;
+  background: #bfc9d4;
+  opacity: .6;
+  display: block;
+  border-radius: 100%;
+  top: 100px;
+  left: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateX(-50%);
+  -webkit-filter: blur(4.25px);
+          filter: blur(4.25px);
+  -webkit-animation: shadow 2s infinite alternate;
+          animation: shadow 2s infinite alternate;
+}
+
+@-webkit-keyframes arrow {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(-135deg) translate(10px, 10px);
+            transform: rotate(-135deg) translate(10px, 10px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(-135deg) translate(-10px, -10px);
+            transform: rotate(-135deg) translate(-10px, -10px);
+  }
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(-135deg) translate(-10px, -10px);
+            transform: rotate(-135deg) translate(-10px, -10px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(-135deg) translate(10px, 10px);
+            transform: rotate(-135deg) translate(10px, 10px);
+  }
+}
+
+
+@-webkit-keyframes updown{
+  to {
+    -webkit-transform:translateY(10px);
+            transform:translateY(10px);
+  }
+}
+
+@keyframes updown{
+  to {
+    -webkit-transform:translateY(10px);
+            transform:translateY(10px);
+  }
+}
+@-webkit-keyframes blink{
+  0% {
+    height: 0;
+  }
+  30%, 100% {
+    height: 5px;
+  }
+}
+@keyframes blink{
+  0% {
+    height: 0;
+  }
+  30%, 100% {
+    height: 5px;
+  }
+}
+
+@-webkit-keyframes moveNose{
+  0%, 100%, 90% {
+  -webkit-transform:translateY(20px);
+          transform:translateY(20px);
+  }
+  20%, 30% {
+    -webkit-transform:translate(3.75px,17.5px);
+            transform:translate(3.75px,17.5px);
+  }
+  60%, 70% {
+    -webkit-transform:translate(-3.75px,17.5px);
+            transform:translate(-3.75px,17.5px);
+  }
+}
+
+@keyframes moveNose{
+  0%, 100%, 90% {
+  -webkit-transform:translateY(20px);
+          transform:translateY(20px);
+  }
+  20%, 30% {
+    -webkit-transform:translate(3.75px,17.5px);
+            transform:translate(3.75px,17.5px);
+  }
+  60%, 70% {
+    -webkit-transform:translate(-3.75px,17.5px);
+            transform:translate(-3.75px,17.5px);
+  }
+}
+@-webkit-keyframes shadow{
+  from {
+    width: 50px;
+  }
+  to {
+    width: 37.5px;
+  }
+}
+@keyframes shadow{
+  from {
+    width: 50px;
+  }
+  to {
+    width: 37.5px;
+  }
+}

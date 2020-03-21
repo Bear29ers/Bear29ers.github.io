@@ -1,90 +1,390 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progate</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <title>Yuta Okuma</title>
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="bear/bear.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/edc4ee5159.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <div class="header-left">
-        <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
-      </div>
-      <span class="fa fa-bars menu-icon"></span>
-      <div class="header-right">
-        <a href="#">レッスン</a>
-        <a href="#">新規登録</a>
-        <a href="#" class="login">ログイン</a>
-      </div>
+  <header id="home">
+    <div class="menu-toggler">
+      <div class="bar half start"></div>
+      <div class="bar"></div>
+      <div class="bar half end"></div>
+    </div>
+    <nav class="top-nav">
+      <ul class="nav-list">
+        <li>
+          <a href="#home" class="nav-link">Home</a>
+        </li>
+        <li>
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li>
+          <a href="#skills" class="nav-link">Skills</a>
+        </li>
+        <li>
+          <a href="#portfolio" class="nav-link">Portfolio</a>
+        </li>
+        <li>
+          <a href="#experience" class="nav-link">Experience</a>
+        </li>
+        <li>
+          <a href="#gallery" class="nav-link">Photo Gallery</a>
+        </li>
+        <canvas id="bubble"></canvas>
+      </ul>
+    </nav>
+    <div class="landing-text">
+      <!-- <h1>Yuta Okuma</h1> -->
+      <img src="assets/images/yutaokuma.png" alt="yuta okuma">
+      <h6>Web Developer and Photographer</h6>
     </div>
   </header>
-  <div class="top-wrapper">
+
+  <section class="about" id="about">
     <div class="container">
-      <h1>LEARN TO CODE.<br>LEARN TO BE CREATIVE.</h1>
-      <p>Progateはオンラインプログラミング学習サービスです。<br>初心者にもやさしいスライドとレッスンで、ウェブサービスを作りながらプログラミングを学んでいきましょう。</p>
-      <div class="btn-wrapper">
-        <a href="#" class="btn signup">新規登録はこちら</a>
-        <p>or</p>
-        <a href="#" class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</a>
-        <a href="#" class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</a>
+      <div class="profile-img" data-aos="fade-right" data-aos-delay="300">
+        <img src="assets/images/bearprofile.png" alt="profile">
+      </div>
+      <div class="about-details" data-aos="fade-left" data-aos-delay="600">
+        <div class="about-heading">
+          <h1>About</h1>
+          <h6>Myself</h6>
+        </div>
+        <p>
+          大熊 悠太（おおくま ゆうた）<br>
+          1995年11月29日生まれ。千葉県佐倉市出身。<br>
+          小学校から中学校の終わりまで約9年間野球をしており、好きなチームは読売ジャイアンツ、MLBではニューヨークヤンキースとトロントブルージェイズ。<br>
+          和太鼓を部活動として取り組んでいた高校時代に映像制作に出会い、簡単な映像作品を作り始めたことをきっかけに映像の道を志すようになる。<br>
+          高校卒業まで千葉で過ごし、京都へ移り立命館大学へ入学。
+          大学では、映像学部でコンテンツビジネスを専攻する一方で、Adobe
+          AfterEffectsを用いたアニメーション映像を自主制作で行っていた。2017年に大学を休学し、約1年間カナダ・トロントに語学留学を経験した。インターンシップ先で出会った友人の影響から徐々にプログラミングに興味を持ち始め、フロントエンドの言語から独学で学習を開始する。<br>
+          現在はRuby on Railsを学習しつつ、エンジニアを目指して就職活動中。
+        </p>
+        <div class="social-media">
+          <ul class="nav-list">
+            <li>
+              <a href="https://www.facebook.com/kumakuma1129" class="icon-link" target="_blank">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><i class="fab fa-facebook-f" aria-hidden="true"></i></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/bear_27earl/" class="icon-link" target="_blank">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><i class="fab fa-instagram" aria-hidden="true"></i></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/bear27_kuma" class="icon-link" target="_blank">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><i class="fab fa-twitter" aria-hidden="true"></i></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Bear27kuma" class="icon-link" target="_blank">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><i class="fab fa-github" aria-hidden="true"></i></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.wantedly.com/users/111976342" class="icon-link" target="_blank">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span><img src="assets/images/wantedly.svg" alt="wantedly.svg" width="30" height="30"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="lesson-wrapper">
+  </section>
+
+  <section class="skills" id="skills">
     <div class="container">
-      <div class="heading">
-        <h2>Learn Where to Get Started!</h2>
+      <div class="section-heading">
+        <h1>Skills</h1>
+        <h6>What I can do for you</h6>
       </div>
-      <div class="lessons">
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/html.png">
-            <p>HTML & CSS</p>
+      <div class="my-skills">
+        <div class="skill" data-aos="fade-in" data-aos-delay="300">
+          <div class="icon-container">
+            <i class="fab fa-html5"></i>
           </div>
-          <p class="text-contents">ウェブページの作成に使用される言語です。HTMLとCSSを組み合わせることで、静的なページを作り上げることができます。</p>
+          <h1>HTML</h1>
+          <p>
+            基本的なWebサイトの構造とHTMLタグの仕組みについては理解しており、
+            一般的なWebサイト制作は問題なく行えるスキルは備わっている。
+          </p>
         </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/jQuery.png">
-            <p>jQuery</p>
+        <div class="skill" data-aos="fade-in" data-aos-delay="600">
+          <div class="icon-container">
+            <i class="fab fa-css3"></i>
           </div>
-          <p class="text-contents">素敵な動きを手軽に実装できるJavaScriptライブラリです。 アニメーション効果をつけたり、Ajax（エイジャックス）を使って外部ファイルを読み込んだりと色々なことができます。</p>
+          <h1>CSS</h1>
+          <p>
+            CSSアニメーションについての知識があり、基本的なSassも書くことができる。
+            CSSフレームワークとして、Bootstrapを使いこなしてのサイト制作もできる。
+          </p>
         </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/ruby.png">
-            <p>Ruby</p>
+        <div class="skill" data-aos="fade-in" data-aos-delay="900">
+          <div class="icon-container">
+            <i class="fab fa-js-square"></i>
           </div>
-          <p class="text-contents">オープンソースの動的なプログラミング言語で、 シンプルさと高い生産性を備えています。大きなWebアプリケーションから小さな日用ツールまで、さまざまなソフトウェアを作ることができます。</p>
+          <h1>JavaScript</h1>
+          <p>
+            基礎的な内容からES6の記法についても一通り学習しており、Webサイトにおいても
+            jQueryの記述なしにJavaScriptの記述のみでDOMを扱うことができる。
+          </p>
         </div>
-        <div class="lesson">
-          <div class="lesson-icon">
-            <img src="https://prog-8.com/images/html/advanced/php.png">
-            <p>PHP</p>
+        <div class="skill" data-aos="fade-in" data-aos-delay="1200">
+          <div class="icon-container">
+            <i class="fab fa-react"></i>
           </div>
-          <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
+          <h1>React</h1>
+          <p>
+            JavaScriptのフレームワークとしてReactを学習し、基本的なstateやpropsでの
+            情報の流れなどについては理解している。簡単な気象情報アプリケーションをReactで作成した。
+          </p>
+        </div>
+        <div class="skill" data-aos="fade-in" data-aos-delay="1500">
+          <div class="icon-container">
+            <i class="fas fa-gem"></i>
+          </div>
+          <h1>Ruby</h1>
+          <p>
+            スクリプト言語のひとつとしてRubyに取り掛かり、フレームワークとしてRuby on Railsを独学で学習。現在はオリジナルサービスである"babbit"を開発しながら新機能を加えつつ学習を進めている。
+          </p>
+        </div>
+        <div class="skill" data-aos="fade-in" data-aos-delay="1800">
+          <div class="icon-container">
+            <i class="fab fa-adobe"></i>
+          </div>
+          <h1>Adobe Tools</h1>
+          <p>
+            映像系であるAfterEffects、Premiere Proをはじめとして、デザイン系ではIllustrator、Photoshop、XD、写真現像としてLightroomなどのソフトを使いこなすことができる。
+          </p>
         </div>
       </div>
-      <div class="clear"></div>
     </div>
-  </div>
-  <div class="message-wrapper">
+  </section>
+
+  <section class="portfolio" id="portfolio">
     <div class="container">
-      <div class="heading">
-        <h2>さぁ、あなたもProgateでプログラミングを学んでみませんか?</h2>
-        <h3>Let's learn to code, learn to be creative!</h3>
+      <div class="section-heading">
+        <h1>Portfolio</h1>
+        <h6>View some of my recent work</h6>
       </div>
-      <span class="btn message">さっそく開発する</span>
+      <div class="my-portfolio">
+        <div class="portfolio-card">
+          <div class="imgBox" data-text="Babbit">
+            <img src="assets/images/code.png" alt="code.png">
+          </div>
+          <div class="content">
+            <div>
+              <h3>Babbit</h3>
+              <p>
+                ※ 現在鋭意開発中<br>
+                これまで独学で学習してきたことをアウトプットする形で、Ruby on
+                Railsを用いて「人々の悪い習慣や止めたいことに対して、日々の努力やアクションを共有して克服するためのSNS」を現在開発しており、日々新規機能を追加しながら学習に励んでいる。
+              </p>
+              <a href="https://babbit.herokuapp.com/" target="_blank">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="imgBox" data-text="Weathereport">
+            <img src="assets/images/weather.png" alt="weather.png">
+          </div>
+          <div class="content">
+            <div>
+              <h3>Weathereport</h3>
+              <p>
+                すばやく世界中の気象情報を見ることができるミニアプリ。
+                Reactとリクエストについて学習したので、それを応用として使うことができるように、Openweathermapという気象情報APIを利用して、簡単な気象情報アプリケーションをReactで作成した。<br>
+                APIを実践的に使うことができるのかを目標としていたアプリケーションであったため、URL先では検索機能が使用できない。
+              </p>
+              <a href="https://weathereport-app.firebaseapp.com/" target="_blank">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="imgBox" data-text="natureCraze"">
+            <img src=" assets/images/website.png" alt="launch.png">
+          </div>
+          <div class="content">
+            <div>
+              <h3>natureCraze</h3>
+              <p>
+                架空のスムージーショップのウェブサイト。<br>
+                Flexboxの技術を使用し、画像の配置や大きさなどには特にこだわったため、一貫してユーザーに見やすいデザインにしている。<br>
+                また、レスポンシブ対応もしているため、パソコン・スマホのどちらでもストレスなく利用することが可能。
+              </p>
+              <a href="https://github.com/Bear27kuma/natureCraze" target="_blank">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="imgBox" data-text="Kyoto Travel">
+            <img src="assets/images/video.png" alt="earn.png">
+          </div>
+          <div class="content">
+            <div>
+              <h3>Kyoto Travel</h3>
+              <p>
+                京都旅行をテーマにしたフラットアニメーション作品。<br>
+                京都にやってくる外国人観光客をターゲットとし、京都旅行で訪れるべきスポットをアニメーション映像とともに簡単に紹介する内容になっている。<br>
+                企画から設計、デザイン、映像編集までを一人で行い、使用したソフトはAdobe illustratorとAfterEffects。
+              </p>
+              <a href="https://vimeo.com/191870543" target="_blank">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <footer>
+  </section>
+
+  <section class="experience" id="experience">
     <div class="container">
-      <img src="https://prog-8.com/images/html/advanced/footer_logo.png">
-      <p>Learn to Code, Learn to be Creative.</p>
+      <div class="section-heading">
+        <h1>Work Experience</h1>
+        <h6>Past and Current jobs</h6>
+      </div>
     </div>
+    <div class="timeline" data-aos="fade-down" data-aos-delay="300">
+      <ul>
+        <li>
+          <div class="content">
+            <h3>現在就職活動中</h3>
+            <p>
+              現在、Webエンジニアを目指して就職活動中
+            </p>
+          </div>
+          <div class="time">
+            <h4>2020-01 - Now</h4>
+          </div>
+        </li>
+        <li>
+          <div class="content">
+            <h3>ライフイズテック株式会社</h3>
+            <h4>メンター / カメラマン / 運営スタッフ (インターンシップ・アルバイト)</h4>
+            <p>
+              大学在学中に自主制作でアニメーション映像に取り組んでおり、アウトプットの場に困っていた時期に友人から誘いを受け、また中高生の新たなきっかけをつくるという思いに共感し、メンターとして参加し、主に映像編集コースを担当した。
+              中高生の長期休暇期間に全国の各大学で開催される3〜5日のITキャンプでは、中高生のITでのものづくりのきっかけを届けるべく、自身の活動拠点である関西のキャンプ以外にも、東京や福岡など各地へメンターとしてキャンプに参加した。
+              参加したキャンプの中にはメンターとしてだけでなく、カメラマンとしてキャンプ全体の場を盛り上げる役割も担った。<br>
+              <br>
+              また、隔週で開催される登校型のスクールにもクラス全体をサポートするCA（クラスアシスタント）として総じて約1年半活動した。これはキャンプとは異なり、長い期間で大学生メンターとともに中高生がアプリケーションの制作とそのリリースに向けて取り組むコースであり、基本的に一年間を通して一つのアプリケーションを作成するために基礎からみっちり学習する。私はこのスクールでクラスが円滑に進むことができるよう、裏方のサポート（出席管理、中高生の相談役、各コースの教材の準備、カメラマン、発表会の準備など）を担当した。
+              この中で私は自分の強みである映像編集・デザインのスキルを生かし、オリジナル映像作品を仕上げ、クラスの最終回に行われる発表会のオープニング映像を制作した。<br>
+              <br>
+              その他にも、自分のように技術やスキルを中高生の可能性のために発揮したいという大学生を生み出すため、大学生向けのメンター育成研修のプログラムである”Life is Tech!
+              Leaders”で、社員をサポート（候補者の面接・採用、会場の予約、講師や候補者との連絡の取り合いなど）する運営スタッフを約半年間努めた。
+            </p>
+          </div>
+          <div class="time">
+            <h4>2016-03 - 2019-03</h4>
+          </div>
+        </li>
+        <div style="clear: both"></div>
+      </ul>
+    </div>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-heading">
+        <h1>Photo Gallery</h1>
+        <h6>The world is always a decisive moment!</h6>
+      </div>
+      <div class="image-gallery">
+        <a href="https://www.instagram.com/p/BTNoXdplt68/?utm_source=ig_web_button_share_sheet" class="img-1"
+          target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://www.instagram.com/p/B7asUWSB8y7/?utm_source=ig_web_button_share_sheet" class="img-2"
+          target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://www.instagram.com/p/BS_NXzYFZbl/?utm_source=ig_web_button_share_sheet" class="img-3"
+          target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://www.instagram.com/p/BV8V1qKl9Iu/?utm_source=ig_web_copy_link" class="img-4" target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://www.instagram.com/p/BWJKs3blCJN/?utm_source=ig_web_button_share_sheet" class="img-5"
+          target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://www.instagram.com/p/BeYJRBohzMt/?utm_source=ig_web_button_share_sheet" class="img-6"
+          target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://www.instagram.com/p/BXzJw-zFnNO/?utm_source=ig_web_button_share_sheet" class="img-7"
+          target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <a href="https://www.instagram.com/p/BTzF2TOFE_5/?utm_source=ig_web_button_share_sheet" class="img-8"
+          target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="copyright">
+    <div id="indicator">
+      <div class="arrow">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="bear">
+        <div class="bear__ears">
+          <div class="bear__ears__left ear"></div>
+          <div class="bear__ears__right ear"></div>
+        </div>
+        <div class="bear__body">
+          <div class="bear__eyes">
+            <div class="bear__eyes--left eye"></div>
+            <div class="bear__eyes--right eye"></div>
+          </div>
+          <div class="bear__nose">
+            <div class="bear__nose--inner"></div>
+          </div>
+        </div>
+      </div>
+      <div class="shadow"></div>
+    </div>
+    <p>&copy; 2020 Yuta Okuma</p>
   </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="main.js"></script>
+  <script src="particles.js"></script>
 </body>
+
 </html>

@@ -1,15 +1,15 @@
 var w = window.innerWidth,
-  h = window.innerHeight,
-  canvas = document.getElementById('bubble'),
-  ctx = canvas.getContext('2d'),
-  rate = 60,
-  arc = 100,
-  time,
-  count,
-  speed = 10,
-  size = 7,
-  lights = new Array,
-  colors = ['#fcb721', '#ffffff', '#21d4fd', '#FF5ACD', '#8bff59', '#8b59ff'];
+    h = window.innerHeight,
+    canvas = document.getElementById('bubble'),
+    ctx = canvas.getContext('2d'),
+    rate = 60,
+    arc = 100,
+    time,
+    count,
+    speed = 10,
+    size = 7,
+    lights = new Array,
+    colors = ['#fcb721', '#ffffff', '#21d4fd', '#FF5ACD', '#8bff59', '#8b59ff'];
 
   canvas.setAttribute('width', w);
   canvas.setAttribute('height', h);

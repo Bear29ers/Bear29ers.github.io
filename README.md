@@ -2,6 +2,9 @@
 
 自分自身の紹介やスキル、これまでに制作したポートフォリオ、経歴などをまとめたポートフォリオサイト<br />
 
+これまでの開発リポジトリはこちら<br />
+https://github.com/Bear27kuma/portfolio <br />
+
 <br />
 
 <img width="840" alt="screenshot1" src="https://user-images.githubusercontent.com/39920490/77169553-05839100-6afd-11ea-84e0-41338e0228fd.png">

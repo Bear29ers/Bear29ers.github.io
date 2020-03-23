@@ -1409,3 +1409,9 @@ header {
     margin: 0 .7rem;;
   }
 }
+
+@media screen and (orientation: landscape) {
+  #bubble {
+    visibility: hidden;
+  }
+}

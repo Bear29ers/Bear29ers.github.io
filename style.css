@@ -1410,3 +1410,33 @@ header {
     margin: 0 .7rem;;
   }
 }
+
+@media screen and (max-height: 520px) {
+  .top-nav .nav-list li {
+    margin: 1.5rem 0;
+  }
+
+  .top-nav .nav-list .nav-link {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-height: 400px) {
+  .top-nav .nav-list li {
+    margin: 1rem 0;
+  }
+
+  .top-nav .nav-list .nav-link {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-height: 310px) {
+  .top-nav .nav-list li {
+    margin: .8rem 0;
+  }
+
+  .top-nav .nav-list .nav-link {
+    font-size: 2.5rem;
+  }
+}
